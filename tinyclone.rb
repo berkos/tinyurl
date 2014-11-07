@@ -1,5 +1,8 @@
-%w(rubygems sinatra haml dm-core dm-timestamps dm-types uri restclient xmlsimple).each  { |lib| require lib}
+%w(rubygems sinatra haml dm-core dm-timestamps dm-migrations dm-types uri restclient xmlsimple).each  { |lib| require lib}
 require_relative 'dirty_words'
+
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'mysql://root:root@localhost/tinyclone')
+
 disable :show_exceptions
 
 get '/' do haml :index end
