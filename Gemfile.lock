@@ -22,11 +22,14 @@ GEM
     haml (4.0.0)
       tilt
     json (1.8.1)
+    mime-types (1.25.1)
     multi_json (1.10.1)
     mysql (2.9.1)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -34,6 +37,7 @@ GEM
     stringex (1.5.1)
     tilt (1.4.1)
     uuidtools (2.1.5)
+    xml-simple (1.1.2)
 
 PLATFORMS
   ruby
@@ -45,4 +49,6 @@ DEPENDENCIES
   dm-types
   haml
   mysql
+  rest-client
   sinatra
+  xml-simple
