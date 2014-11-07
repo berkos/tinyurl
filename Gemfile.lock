@@ -5,9 +5,17 @@ GEM
     bcrypt (3.1.9)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
+    data_objects (0.10.14)
+      addressable (~> 2.1)
     dm (0.0.1)
     dm-core (1.2.1)
       addressable (~> 2.3)
+    dm-do-adapter (1.2.0)
+      data_objects (~> 0.10.6)
+      dm-core (~> 1.2.0)
+    dm-mysql-adapter (1.2.0)
+      dm-do-adapter (~> 1.2.0)
+      do_mysql (~> 0.10.6)
     dm-timestamps (1.2.0)
       dm-core (~> 1.2.0)
     dm-types (1.2.2)
@@ -18,6 +26,8 @@ GEM
       multi_json (~> 1.0)
       stringex (~> 1.4)
       uuidtools (~> 2.1)
+    do_mysql (0.10.14)
+      data_objects (= 0.10.14)
     fastercsv (1.5.5)
     haml (4.0.0)
       tilt
@@ -45,6 +55,7 @@ PLATFORMS
 DEPENDENCIES
   dm
   dm-core
+  dm-mysql-adapter
   dm-timestamps
   dm-types
   haml
